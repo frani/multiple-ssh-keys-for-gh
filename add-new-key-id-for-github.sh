@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo "You are going to add and second RSA key for ssh or your GPG"
+echo "You are going to add a new RSA key for ssh or your GPG"
 echo "this also going change your ~/.git/config"
 echo ""
 while true; do
-    echo "How is your name? $(whoami)"
+    echo "How is your name? [default is '$(whoami)']"
     read NAME
     [[ $NAME == "" ]] && NAME="$(whoami)"
-    echo "how is your work/second email? default is $(whoami)@$(hostname)"
+    echo "how is your work/second email? [default is '$(whoami)@$(hostname)']"
     read EMAIL
     [[ $EMAIL == "" ]] && EMAIL="$(whoami)@$(hostname)"
-    echo "what is the name of your company? default is just 'work'"
+    echo "what is the name of your company? [default is 'work']"
     read WORK
     [[ $WORK == "" ]] && WORK="work"
     echo "Name: ${NAME}"
